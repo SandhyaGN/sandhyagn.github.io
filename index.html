@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,15 +17,50 @@
             color: #333;
         }
 
+        /* NAVBAR */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #1f2937;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* HERO */
         header {
             background-color: #1f2937;
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header h3 {
+            margin-top: 10px;
+            font-weight: normal;
+            color: #60a5fa;
+        }
+
         section {
-            padding: 40px 20px;
+            padding: 60px 20px;
             max-width: 900px;
             margin: auto;
         }
@@ -29,30 +68,47 @@
         h2 {
             border-bottom: 2px solid #2563eb;
             padding-bottom: 10px;
+            margin-bottom: 30px;
         }
 
+        /* SKILLS */
         .skills span {
             display: inline-block;
             background: #2563eb;
             color: white;
-            padding: 8px 12px;
-            margin: 5px;
+            padding: 8px 14px;
+            margin: 6px;
             border-radius: 20px;
             font-size: 14px;
+            transition: 0.3s;
         }
 
+        .skills span:hover {
+            background: #1e40af;
+        }
+
+        /* PROJECTS */
         .project {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
             margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
+        /* BUTTON */
         .btn {
             display: inline-block;
             background-color: #2563eb;
             color: white;
-            padding: 10px 18px;
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1e40af;
         }
 
         footer {
@@ -66,25 +122,35 @@
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- NAVIGATION -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
 <header>
     <h1>Sandhya G N</h1>
     <h3>Data Engineer | Big Data | Cloud</h3>
     <p>Building scalable data pipelines and analytics solutions</p>
 </header>
 
-<!-- ABOUT ME -->
-<section>
+<!-- ABOUT -->
+<section id="about">
     <h2>About Me</h2>
     <p>
-        Data Engineer with experience designing and optimizing data pipelines 
-        using Apache Spark, SQL, and cloud platforms. Passionate about building 
-        scalable ETL workflows and improving data reliability for analytics and business intelligence.
+        Data Engineer with experience designing scalable ETL pipelines using 
+        Apache Spark, SQL, and cloud technologies. Passionate about optimizing 
+        performance and building reliable data platforms.
     </p>
 </section>
 
-<!-- TECH STACK -->
-<section>
+<!-- SKILLS -->
+<section id="skills">
     <h2>Tech Stack</h2>
     <div class="skills">
         <span>Python</span>
@@ -99,38 +165,38 @@
 </section>
 
 <!-- PROJECTS -->
-<section>
+<section id="projects">
     <h2>Projects</h2>
 
     <div class="project">
         <h3>Real-Time Data Pipeline</h3>
         <p>
-            Built a streaming pipeline using Spark Streaming and Kafka to process 
-            real-time transaction data and store it in Snowflake for analytics.
+            Built a streaming pipeline using Spark Streaming and Kafka 
+            to process transaction data in real time and load into Snowflake.
         </p>
     </div>
 
     <div class="project">
         <h3>Cloud Data Warehouse Migration</h3>
         <p>
-            Migrated legacy on-premise data warehouse to Snowflake, improving query 
-            performance and reducing infrastructure cost.
+            Migrated legacy warehouse to Snowflake, improving performance 
+            and reducing infrastructure cost.
         </p>
     </div>
 
 </section>
 
 <!-- CERTIFICATIONS -->
-<section>
+<section id="certifications">
     <h2>Certifications</h2>
     <ul>
-        <li>Snowflake Platform Training Certificate</li>
-        <li>AWS Fundamentals (if applicable)</li>
+        <li>Snowflake Platform Certificate</li>
+        <li>AWS Fundamentals</li>
     </ul>
 </section>
 
-<!-- RESUME DOWNLOAD -->
-<section>
+<!-- RESUME -->
+<section id="resume">
     <h2>Resume</h2>
     <a href="Sandhya_Resume.pdf" class="btn" download>
         Download Resume
@@ -138,21 +204,15 @@
 </section>
 
 <!-- CONTACT -->
-<section>
+<section id="contact">
     <h2>Contact</h2>
     <p>Email: your.email@gmail.com</p>
-    <p>
-        LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">
-        linkedin.com/in/yourprofile</a>
-    </p>
-    <p>
-        GitHub: <a href="https://github.com/sandhyagn" target="_blank">
-        github.com/sandhyagn</a>
-    </p>
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+    <p>GitHub: github.com/sandhyagn</p>
 </section>
 
 <footer>
-    © 2026 Sandhya G N | Built with GitHub Pages
+    © 2026 Sandhya G N | Hosted on GitHub Pages
 </footer>
 
 </body>
