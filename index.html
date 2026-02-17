@@ -9,238 +9,70 @@
     body {
         margin: 0;
         font-family: 'Segoe UI', sans-serif;
-        background: #f4f6f8;
-        color: #333;
+        background-color: #0f0f1a;
+        color: #ffffff;
         scroll-behavior: smooth;
     }
 
-    /* TOP NAVIGATION */
+    /* TOP NAV */
     header {
         position: fixed;
         width: 100%;
-        background: white;
+        background: rgba(15, 15, 26, 0.9);
+        backdrop-filter: blur(10px);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 60px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        padding: 20px 60px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
         z-index: 1000;
     }
 
     header h1 {
-        font-size: 18px;
         margin: 0;
+        font-size: 18px;
+        color: #8b5cf6;
+        letter-spacing: 1px;
     }
 
     nav a {
-        margin-left: 25px;
+        margin-left: 30px;
         text-decoration: none;
-        color: #333;
+        color: #ccc;
         font-size: 14px;
         transition: 0.3s;
     }
 
     nav a:hover {
-        color: #7a5cff;
+        color: #8b5cf6;
+        text-shadow: 0 0 8px #8b5cf6;
     }
 
-    /* HERO SECTION */
+    /* HERO */
     .hero {
-        margin-top: 100px;
-        padding: 60px;
-        background: linear-gradient(135deg, #ece9f7, #fdfbfb);
+        margin-top: 120px;
+        padding: 80px 60px;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
     }
 
     .hero-container {
         display: flex;
         align-items: center;
-        max-width: 1000px;
+        max-width: 1100px;
         width: 100%;
-        gap: 60px;
+        gap: 80px;
     }
 
     .hero img {
-        width: 220px;
-        height: 220px;
-        border-radius: 12px;
+        width: 260px;
+        height: 260px;
+        border-radius: 20px;
         object-fit: cover;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        border: 2px solid #8b5cf6;
+        box-shadow: 0 0 30px rgba(139,92,246,0.4);
     }
 
     .hero-text h2 {
-        margin: 0;
-        font-size: 36px;
-    }
-
-    .hero-text p {
-        font-size: 18px;
-        color: #555;
-        margin-top: 10px;
-    }
-
-    .hero-text button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        border: none;
-        background: #7a5cff;
-        color: white;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    .hero-text button:hover {
-        background: #5b3fe0;
-    }
-
-    /* SECTIONS */
-    section {
-        padding: 80px 60px;
-        max-width: 1000px;
-        margin: auto;
-    }
-
-    h3 {
-        font-size: 24px;
-        margin-bottom: 20px;
-        position: relative;
-    }
-
-    h3::after {
-        content: "";
-        width: 50px;
-        height: 3px;
-        background: #7a5cff;
-        position: absolute;
-        left: 0;
-        bottom: -8px;
-    }
-
-    /* SKILLS */
-    .skills span {
-        display: inline-block;
-        background: #eae7ff;
-        padding: 8px 15px;
-        margin: 8px 8px 0 0;
-        border-radius: 20px;
-        font-size: 13px;
-    }
-
-    /* PROJECTS */
-    .project {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        transition: 0.3s;
-    }
-
-    .project:hover {
-        transform: translateY(-5px);
-    }
-
-    /* CONTACT */
-    .contact p {
-        margin: 8px 0;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-        .hero-container {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        header {
-            padding: 15px 20px;
-        }
-
-        section {
-            padding: 60px 20px;
-        }
-    }
-
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>Sandhya G N</h1>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-container">
-        <img src="profile.jpg" alt="Profile Photo">
-        <div class="hero-text">
-            <h2>Hi, I'm Sandhya 👋</h2>
-            <p>Data Engineer | Spark | Snowflake | AWS</p>
-            <button onclick="document.getElementById('contact').scrollIntoView()">Contact Me</button>
-        </div>
-    </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-    <h3>About Me</h3>
-    <p>
-        Data Engineer experienced in building scalable ETL pipelines,
-        optimizing distributed systems, and designing cloud-native
-        data platforms.
-    </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-    <h3>Tech Stack</h3>
-    <div class="skills">
-        <span>Python</span>
-        <span>SQL</span>
-        <span>Apache Spark</span>
-        <span>Airflow</span>
-        <span>Snowflake</span>
-        <span>AWS</span>
-        <span>Kafka</span>
-        <span>Git</span>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-    <h3>Projects</h3>
-
-    <div class="project">
-        <h4>Real-Time Streaming Pipeline</h4>
-        <p>Kafka + Spark Streaming architecture for processing high-volume transaction data.</p>
-    </div>
-
-    <div class="project">
-        <h4>Cloud Warehouse Migration</h4>
-        <p>Migrated legacy systems to Snowflake improving performance and cost efficiency.</p>
-    </div>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <h3>Contact</h3>
-    <div class="contact">
-        <p>Email: your.email@gmail.com</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
-        <p>GitHub: github.com/sandhyagn</p>
-    </div>
-</section>
-
-</body>
-</html>
+        font-size: 42px;
